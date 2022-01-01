@@ -20,7 +20,9 @@ export default {
   @apply font-sans antialiased;
 }
 .content-wrapper {
-  @apply px-20;
+  @apply px-20 pt-10;
+  @apply bg-gray-100;
+  @apply min-h-screen;
 }
 .content {
   max-width: 1320px;

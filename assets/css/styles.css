@@ -5,3 +5,6 @@
 body a {
   @apply inline-block;
 }
+body {
+  @apply text-gray-800;
+}

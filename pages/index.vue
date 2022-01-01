@@ -1,16 +1,16 @@
 <template>
-<div class="app">
-  this is front page
-</div>
+  <div class="">
+    <SellReminder />
+  </div>
 </template>
 
 <script lang="ts">
-import Header from '~/components/header/index.vue'
+import SellReminder from '~/components/homepage/SellReminder.vue'
 
 export default {
   name: 'IndexPage',
   components: {
-    Header
+    SellReminder
   }
 }
 </script>
