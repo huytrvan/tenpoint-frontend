@@ -1,13 +1,16 @@
 <template>
-<div class="font-sans antialiased">
-  <Header />
+<div class="app">
+  this is front page
 </div>
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import Header from '~/components/header/index.vue'
 
-export default Vue.extend({
+export default {
   name: 'IndexPage',
-})
+  components: {
+    Header
+  }
+}
 </script>
