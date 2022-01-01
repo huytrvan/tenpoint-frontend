@@ -21,7 +21,7 @@ export default {
   plugins: [],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
+  components: false, // auto import slows down the build time in dev, better to import components manually
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
