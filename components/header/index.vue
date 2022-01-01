@@ -12,6 +12,6 @@ export default {
 </script>
 <style scoped>
   .logo {
-    @apply h-4 w-4 mr-2;
+    @apply h-16 w-20 mr-2;
   }
 </style>
