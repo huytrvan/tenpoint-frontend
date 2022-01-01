@@ -29,6 +29,8 @@ export default {
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    // https://google-fonts.nuxtjs.org
+    '@nuxtjs/google-fonts',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -45,4 +47,13 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  // Setup font
+  googleFonts: {
+    families: {
+      Inter: ['400', '600'],
+    },
+    subsets: 'vietnamese',
+    download: true,
+  },
 }
