@@ -1,7 +1,9 @@
 <template>
-  <div class="app">
+  <div class="layout-default">
     <Header />
-    <Nuxt />
+    <div class="content-wrapper">
+      <Nuxt class="content"/>
+    </div>
   </div>
 </template>
 <script>
@@ -14,7 +16,14 @@ export default {
 }
 </script>
 <style scoped>
-.app {
-  @apply font-sans antialiased
+.layout-default {
+  @apply font-sans antialiased;
+}
+.content-wrapper {
+  @apply px-20;
+}
+.content {
+  max-width: 1320px;
+  @apply mx-auto;
 }
 </style>

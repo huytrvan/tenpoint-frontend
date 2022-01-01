@@ -12,7 +12,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: [
-          'Inter',
+          'Helvetica Neue',
           'system-ui',
           '-apple-system',
           'Segoe UI',
