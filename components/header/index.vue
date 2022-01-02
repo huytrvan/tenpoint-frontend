@@ -7,7 +7,7 @@
         </NuxtLink>
           <span class="_separator">|</span>
         <NuxtLink to="login?next=https://localhost:3000" class="">
-          <span>+ Free Listing</span>
+          <span>+ Free listing</span>
         </NuxtLink>
       </div>
       <div class="header__buyer-auth">
