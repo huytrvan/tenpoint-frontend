@@ -82,12 +82,12 @@ export default {
 </script>
 <style>
   .form__wrapper {
-    @apply p-8;
+    @apply py-8 px-10;
     @apply bg-white;
-    @apply border border-gray-200;
+    @apply border border-slate-200;
     @apply shadow;
     @apply rounded;
-    @apply max-w-lg;
+    @apply max-w-md;
     @apply mx-auto;
   }
   #login {

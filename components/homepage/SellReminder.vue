@@ -22,7 +22,7 @@ export default {
 <style scoped>
   .reminder__wrapper {
     @apply flex justify-between;
-    @apply border border-gray-200 shadow-sm bg-white;
+    @apply border border-slate-200 shadow-sm bg-white;
     @apply rounded;
   }
   .reminder__text{

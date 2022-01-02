@@ -6,6 +6,6 @@ body a {
   @apply inline-block;
 }
 body {
-  @apply text-gray-800;
+  @apply text-slate-800;
   @apply font-sans antialiased;
 }

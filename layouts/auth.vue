@@ -44,7 +44,7 @@ export default {
   }
   .content-wrapper {
   @apply px-20 pt-8;
-  @apply bg-gray-100;
+  @apply bg-slate-100;
   @apply min-h-screen;
 }
 .content {
