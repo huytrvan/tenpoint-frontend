@@ -26,7 +26,7 @@
         <input type="submit" :style="(formatErrors.username || formatErrors.password) ? 'cursor: not-allowed' : ''" value="Log in" id="submit">
       </form>
       <div class="form__new-user">
-        <p>Don't have an account? <a class="form__signup-link" href="/signup">Sign up</a></p>
+        <p>Don't have an account? <NuxtLink class="form__signup-link" to="/signup">Sign up</NuxtLink></p>
       </div>
     </div>
   </div>
@@ -34,7 +34,7 @@
 <script>
 export default {
   name: 'Login',
-  layout: 'auth',
+  layout: 'auth-layout',
   data() {
     return {
       username: '',
@@ -80,11 +80,11 @@ export default {
   }
 }
 </script>
-<style>
+<style scoped>
   .form__wrapper {
     @apply py-8 px-10;
     @apply bg-white;
-    @apply border border-slate-200;
+    @apply border border-gray-200;
     @apply shadow;
     @apply rounded;
     @apply max-w-md;

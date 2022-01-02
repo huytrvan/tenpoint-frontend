@@ -20,7 +20,9 @@ export default {
 </script>
 <style scoped>
   .auth__header {
-    @apply py-2 px-20 shadow-sm;
+    @apply py-2 px-20;
+    @apply shadow-sm;
+    @apply border-b border-gray-200;
   }
   .auth__header-main {
     max-width: 1320px;
@@ -44,7 +46,7 @@ export default {
   }
   .content-wrapper {
   @apply px-20 pt-8;
-  @apply bg-slate-100;
+  @apply bg-gray-100;
   @apply min-h-screen;
 }
 .content {
