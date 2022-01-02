@@ -131,7 +131,7 @@ export default {
     @apply font-semibold;
   }
   .form__signup-link {
-    @apply text-orange-700;
+    @apply text-orange-700 hover:text-orange-800;
     @apply ml-0.5;
   }
 </style>
