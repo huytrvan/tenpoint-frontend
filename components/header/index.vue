@@ -6,7 +6,7 @@
           <span>My Seller page</span>
         </NuxtLink>
           <span class="_separator">|</span>
-        <NuxtLink to="login?next=https://localhost:3000" class="">
+        <NuxtLink to="login?next=https://localhost:3000" class="header__freeListingBtn">
           <span>+ Free listing</span>
         </NuxtLink>
       </div>
@@ -72,4 +72,5 @@ export default {
   .header__auth a {
     @apply hover:text-orange-200;
   }
+
 </style>

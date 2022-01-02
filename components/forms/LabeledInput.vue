@@ -6,7 +6,7 @@
     <input
       :type="inputType"
       :value="inputData"
-      @blur="handleInputFormat"
+      @change="handleInputFormat"
       :name="inputName"
       :id="inputName"
       class="labeledInput__input"

@@ -2,8 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-body a {
+a {
   @apply inline-block;
+  @apply cursor-pointer;
 }
 body {
   @apply text-gray-800;
