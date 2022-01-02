@@ -16,9 +16,6 @@ export default {
 }
 </script>
 <style scoped>
-.layout-default {
-  @apply font-sans antialiased;
-}
 .content-wrapper {
   @apply px-20 pt-10;
   @apply bg-gray-100;

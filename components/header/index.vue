@@ -22,7 +22,7 @@
     </div>
     <div class="header__main">
       <NuxtLink to="./" class="brand__wrapper">
-        <img :src="require('~/static/tenpoint-logo.svg')" alt="" class="brand__logo">
+        <img :src="require('~/static/tenpoint-logo-for-dark-background.svg')" alt="" class="brand__logo">
         <p class="brand__name">Tenpoint</p>
       </NuxtLink>
     </div>
