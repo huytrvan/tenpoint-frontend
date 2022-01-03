@@ -2,17 +2,17 @@
   <div class="layout-default">
     <FrontHeader />
     <div class="content-wrapper">
-      <Nuxt class="content"/>
+      <Nuxt class="content" />
     </div>
   </div>
 </template>
 <script>
-import FrontHeader from '~/components/headers/FrontHeader.vue';
+import FrontHeader from '~/components/headers/FrontHeader.vue'
 
 export default {
   components: {
-    FrontHeader
-  }
+    FrontHeader,
+  },
 }
 </script>
 <style scoped>
