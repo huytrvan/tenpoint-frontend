@@ -1,0 +1,28 @@
+<template>
+  <svg
+    version="1.1"
+    id="Layer_1"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    x="0px"
+    y="0px"
+    viewBox="0 0 122.88 63.9"
+    style="enable-background: new 0 0 122.88 63.9"
+    xml:space="preserve"
+    stroke="none"
+    fill="currentColor"
+  >
+    <style type="text/css">
+      .st0 {
+        fill-rule: evenodd;
+        clip-rule: evenodd;
+      }
+    </style>
+    <g><polygon class="st0" points="61.44,63.9 122.88,0 0,0 61.44,63.9" /></g>
+  </svg>
+</template>
+<script>
+export default {
+  name: 'IconArrowDown',
+}
+</script>

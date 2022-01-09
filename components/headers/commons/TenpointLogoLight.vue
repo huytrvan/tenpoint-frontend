@@ -19,14 +19,16 @@ export default {
   @apply flex items-center;
 }
 .tenpoint-logo-light__logo {
-  @apply h-14 w-14;
+  @apply h-12 w-12;
   @apply p-2;
   @apply bg-orange-100 rounded;
   @apply mr-1;
 }
 .tenpoint-logo-light__name {
   @apply font-semibold;
-  @apply text-[2rem];
+  @apply text-[1.5rem];
+  /* Hide text in mobile */
+  @apply hidden md:block;
 }
 </style>
 

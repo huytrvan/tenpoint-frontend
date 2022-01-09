@@ -42,7 +42,6 @@ export default {
   @apply relative;
   @apply text-gray-800;
   @apply flex-grow;
-  @apply ml-4;
   @apply max-w-xl;
 }
 .search-bar__input {
