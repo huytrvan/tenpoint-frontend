@@ -25,15 +25,18 @@
     </div>
     <div class="header__main">
       <TenpointLogoLight />
+      <SearchBar />
     </div>
   </header>
 </template>
 <script>
 import TenpointLogoLight from '~/components/headers/commons/TenpointLogoLight.vue'
+import SearchBar from '~/components/headers/commons/SearchBar.vue'
 export default {
-  name: 'FrontHeader',
+  name: 'StoreFrontHeader',
   components: {
     TenpointLogoLight,
+    SearchBar,
   },
 }
 </script>
@@ -45,7 +48,7 @@ export default {
 }
 .header__auth,
 .header__main {
-  @apply flex justify-between;
+  @apply flex justify-between items-center;
 }
 /* Keep header in max-width */
 .header__auth,

@@ -10,3 +10,10 @@ body {
   @apply text-gray-800;
   @apply font-sans antialiased;
 }
+body, button, a,  {
+  touch-action: manipulation; /* prevent weird zoom on iOS Safari */
+}
+
+input:focus, textarea:focus, select:focus, button:focus {
+  outline: 0;
+}
