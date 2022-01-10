@@ -39,6 +39,18 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    // https://github.com/nuxt-community/redirect-module
+    '@nuxtjs/redirect-module',
+  ],
+
+  redirect: [
+    {'^/signin': '/log-in'},
+    {'^/sign-in': '/log-in'},
+    {'^/signup': '/log-in'},
+    {'^/sign-up': '/log-in'},
+    {'^/login': '/log-in'},
+    {'^/register': '/log-in'},
+    {'^/create-account': '/log-in'},
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -52,8 +64,8 @@ export default {
     postcss: {
       plugins: {
         tailwindcss: {},
-        autoprefixer: {}
-      }
+        autoprefixer: {},
+      },
     },
   },
 
@@ -69,5 +81,5 @@ export default {
   server: {
     host: '0.0.0.0',
     port: 8888,
-  }
+  },
 }
