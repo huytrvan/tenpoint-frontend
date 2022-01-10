@@ -1,8 +1,9 @@
 <template>
-  <div class="">
+  <div class="layout-store-admin">
     <StoreAdminHeader />
     <div class="content-wrapper">
       <div class="content">
+        <h2>{{ titleStore }}</h2>
         <Nuxt />
       </div>
     </div>
@@ -13,13 +14,18 @@ import StoreAdminHeader from '~/components/headers/StoreAdminHeader.vue'
 export default {
   name: 'StoreAdminLayout',
   components: {
-    StoreAdminHeader
-  }
+    StoreAdminHeader,
+  },
+  computed: {
+    titleStore() {
+      return this.$store.state.meta.title
+    },
+  },
 }
 </script>
 <style scoped>
-  .content-wrapper {
-  @apply px-2 md:px-20 pt-8;
+.content-wrapper {
+  @apply px-2 md:px-20 pt-10;
   @apply bg-gray-100;
   @apply min-h-screen;
 }
@@ -34,7 +40,14 @@ export default {
 }
 </style>
 <style>
-.store-admin__title {
+/* Global Style */
+.store-admin__page-title {
   @apply text-xl font-semibold;
 }
+.store-admin__link {
+  @apply text-orange-700 hover:text-orange-800;
+  @apply ml-0.5;
+}
+/* .store-admin__instruction {
+} */
 </style>
