@@ -63,7 +63,7 @@
 import LabeledInput from '~/components/forms/LabeledInput.vue'
 export default {
   name: 'AuthForm',
-  layout: 'auth-layout',
+  layout: 'StoreAdminLayout',
   components: {
     LabeledInput,
   },

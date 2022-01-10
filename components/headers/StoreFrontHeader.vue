@@ -65,7 +65,7 @@ export default {
 </script>
 <style>
 .header {
-  @apply py-2 px-2 md:px-20;
+  @apply p-2 md:px-20;
   @apply shadow-sm;
   @apply bg-orange-600;
   @apply text-orange-100;
