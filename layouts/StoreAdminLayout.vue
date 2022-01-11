@@ -49,5 +49,12 @@ export default {
   @apply ml-0.5;
 }
 /* .store-admin__instruction {
-} */
+} 
+.store-admin__form {
+}
+.store-admin__form-label {
+}
+.store-admin__form-upload {
+}
+*/
 </style>
