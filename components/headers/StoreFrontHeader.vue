@@ -75,6 +75,7 @@ export default {
   max-width: 1320px;
   @apply mx-auto;
   @apply grid grid-cols-12 gap-2 md:gap-0 content-center grid-rows-1;
+  @apply px-1;
 }
 .header__language {
   @apply col-span-1;

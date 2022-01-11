@@ -37,7 +37,7 @@ export default {
   .reminder__merchant .reminder__link{
     @apply border border-orange-500;
     @apply text-orange-600 hover:text-yellow-900;
-    @apply bg-white hover:bg-orange-200;
+    @apply bg-gray-50 hover:bg-orange-200;
   }
   .reminder__merchant {
     @apply bg-orange-100;

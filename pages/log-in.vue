@@ -1,18 +1,28 @@
 <template>
   <!-- the 'content' class will be placed in the div below -->
   <div>
-    <form 
-      class="store-admin__form" 
-      :action="next"
-      name="login"
-      id="login"
-    >
+    <form class="store-admin__form" :action="next" name="login" id="login">
       <p class="store-admin__instruction">Log in (or sign up) using:</p>
-      <NuxtLink :to="googleOauth" class="log-in__oauth-link oauth-google">Google</NuxtLink>
-      <NuxtLink :to="facebookOauth" class="log-in__oauth-link oauth-facebook">Facebook</NuxtLink>
-      <NuxtLink :to="appleOauth" class="log-in__oauth-link oauth-apple">Apple</NuxtLink>
+      <NuxtLink :to="googleOauth" class="log-in__oauth-link oauth-google"
+        >Google</NuxtLink
+      >
+      <NuxtLink :to="facebookOauth" class="log-in__oauth-link oauth-facebook"
+        >Facebook</NuxtLink
+      >
+      <NuxtLink :to="appleOauth" class="log-in__oauth-link oauth-apple"
+        >Apple</NuxtLink
+      >
     </form>
-    <p>By using Tenpoint, you agree with our <NuxtLink to="/terms-and-conditions" class="store-admin__link">terms and conditions</NuxtLink> and <NuxtLink to="/privacy-policy" class="store-admin__link">privacy policy</NuxtLink>
+    <p>
+      By using Tenpoint, you agree with our
+      <NuxtLink to="/terms-and-conditions" class="store-admin__link"
+        >terms and conditions</NuxtLink
+      >
+      and
+      <NuxtLink to="/privacy-policy" class="store-admin__link"
+        >privacy policy</NuxtLink
+      >
+    </p>
   </div>
 </template>
 <script>
@@ -30,10 +40,10 @@ export default {
   },
   data() {
     return {
-      title: "Log in",
-      googleOauth: "",
-      facebookOauth: "",
-      appleOauth: "",
+      title: 'Log in',
+      googleOauth: '',
+      facebookOauth: '',
+      appleOauth: '',
     }
   },
   computed: {
@@ -44,7 +54,7 @@ export default {
 }
 </script>
 <style>
-  /* .log-in__oauth-link {
+/* .log-in__oauth-link {
   }
   .oauth-google {
   }

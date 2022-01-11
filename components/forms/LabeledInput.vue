@@ -1,6 +1,7 @@
 <template>
   <div class="labeled-input">
-    <label :for="inputName">{{ inputLabel }}</label>
+    <label class="labeled-input__label" :for="inputName">{{ inputLabel }}</label>
+    <slot name="HelpToolTip"> </slot>
     <input
       :type="inputType"
       :value="inputData"
@@ -10,6 +11,7 @@
       class="labeled-input__input"
       ref="input"
     />
+    <slot name="InputDescription"> </slot>
     <button
       v-if="inputType === 'password'"
       class="labeled-input__show-password-btn"
@@ -69,11 +71,14 @@ export default {
   @apply mb-6;
   @apply relative;
 }
+.labeled-input__label {
+  @apply ml-1;
+}
 .labeled-input__input {
   @apply pl-3 py-3 pr-12;
-  @apply -mb-1;
+  @apply -mb-1 mt-0.5;
   @apply w-full;
-  @apply border border-orange-200 focus:border-orange-600;
+  @apply border border-orange-300 focus:border-orange-600;
   @apply focus:outline-none;
   @apply rounded;
   @apply shadow-sm focus:shadow;

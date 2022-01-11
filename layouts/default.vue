@@ -17,7 +17,7 @@ export default {
 </script>
 <style scoped>
 .content-wrapper {
-  @apply px-20 pt-10;
+  @apply md:px-20 py-8 lg:py-10;
   @apply bg-gray-100;
   @apply min-h-screen;
 }

@@ -7,85 +7,77 @@
   >
     <!-- Todo: add tool tips pop up -->
     <LabeledInput
-      inputName="repairItem"
+      :inputName="repairItem"
       inputType="text"
-      inputLabel="Repair Item"
-      inputData="repairItem"
+      inputLabel="Item To Repair"
+      :inputData="repairItem"
       inputErrorMsg="This is a required field"
-      validationCallback="validateInputNotEmpty"
+      :validationCallback="validateInputNotEmpty"
+      class="store-admin__form-section"
+      @inputUpdated="repairItem = $event"
+      @validationUpdated="formatErrors.repairItem = $event"
     >
-      <HelpToolTip>
-        <ul>
-          <li>What is the item called?</li>
-          <li>What is the model, variant or year of production?</li>
-        </ul>
-      </HelpToolTip>
+      <template slot="HelpToolTip">
+        <HelpToolTip>
+          <p>These questions may help you:</p>
+          <ul>
+            <li>What is the item called?</li>
+            <li>What is the model, variant or year of production?</li>
+          </ul>
+        </HelpToolTip>
+      </template>
     </LabeledInput>
-    <CategoryPicker categoryData="repairCategory" />
-    <!-- Todo: make category picker, which is search field -->
-    <div class="store-admin__form-section">
-      <label class="store-admin__form-label">Item appearance</label>
-      <UploadImages
-        :max="10"
-        maxError="Max upload: 10 images"
-        clearAll="Remove all images"
-        uploadMsg="Click or drop here to upload images"
-        class="store-admin__form-upload"
-      />
-    </div>
     <LabeledTextArea
-      textName="repairDescription"
+      :textName="repairDescription"
       textLabel="Description"
       textErrorMsg="This is a required field"
-      validationCallback="validateInputNotEmpty"
+      :validationCallback="validateInputNotEmpty"
+      class="store-admin__form-section"
+      @inputUpdated="repairDescription = $event"
+      @validationUpdated="formatErrors.repairDescription = $event"
     >
-      <HelpToolTip>
-        <p>
-          Be descriptive: it saves time by letting our technicians identify the
-          issue and prepare sooner.
-        </p>
-        <p>Try answer:</p>
-        <ul>
-          <li>What issue do you have?</li>
-          <li>What model and how long have you been using it?</li>
-          <li></li>
-          <li>What did you do before it broke?</li>
-          <li></li>
-          <li>Any strange noise, smell or deformity?</li>
-          <li></li>
-          <li>etc.</li>
-        </ul>
-      </HelpToolTip>
+      <template slot="HelpToolTip">
+        <HelpToolTip>
+          <p>Be descriptive:</p>
+          <ul>
+            <li>What issue do you have?</li>
+            <li>What did you do before it broke?</li>
+            <li>How long have you been using it?</li>
+            <li>Any strange noise, smell or malfunctionality?</li>
+            <li>etc.</li>
+          </ul>
+          <p class="small-note">Our technician will appreciate it! ;)</p>
+        </HelpToolTip>
+      </template>
     </LabeledTextArea>
     <LabeledSelect
-      selectLabel="Pick a date"
+      selectLabel="Schedule checkup date"
       :selectName="repairDate"
-      :selectData="repairDateOptions"
+      :selectData="repairDate"
+      :selectOptions="repairDateOptions"
     >
+    <template slot="HelpToolTip">
       <HelpToolTip>
         <p>
-          Our professional technician will come to diagnose your item and
-          provide further pricing details. See “<NuxtLink
-            to="/faq/how-repair-service-works"
-            >How repair service works?</NuxtLink
-          >'.
-        </p>
-        <p><strong>Limited time offer</strong></p>
-        <p></p>
-        <p>You can get discounts for different scheduling:</p>
+          Pick a date for professional checkup and
+          get on-site pricing.</p>
+        <p><strong>Discounts available</strong>(*):</p>
         <ul>
-          <li>Today: 0% off</li>
-          <li>Tomorrow: 2% off</li>
-          <li>Anyday within 1 week: 10% off</li>
+          <li>Book 'Today': 0% off</li>
+          <li>Book 'Tomorrow': -2% off</li>
+          <li>Book 'Within 3 - 7 days': -10% off</li>
         </ul>
+        <p class="small-note">* Limited time offer only</p>
       </HelpToolTip>
-      <div class="store-admin__instruction">
-        <p class>Weekdays & Saturday: 6pm - 9pm</p>
-        <p>Sunday: 9am - 6pm</p>
-        <p>Not available on <a href="">Vietnam's national holidays</a></p>
-      </div>
+    </template>
+      <template slot="SelectDescription">
+        <ul>
+        <li>Weekdays & Saturday: 6pm - 9pm</li>
+        <li>Sunday: 9am - 9pm</li>
+        <li>Not available on <a href="">Vietnam's national holidays</a></li>
+        </ul>
+      </template>
     </LabeledSelect>
-    <EstimatedPricing />
   </form>
 </template>
 <script>
@@ -93,22 +85,22 @@ import LabeledInput from '/components/forms/LabeledInput.vue'
 import LabeledTextArea from '/components/forms/LabeledTextArea.vue'
 import LabeledSelect from '/components/forms/LabeledSelect.vue'
 import HelpToolTip from '/components/forms/HelpToolTip.vue'
-import UploadImages from 'vue-upload-drop-images'
-import CategoryPicker from '/components/forms/CategoryPicker.vue'
-import EstimatePricing from 'components/forms/EstimatedPricing.vue'
+// import UploadImages from 'vue-upload-drop-images'
+// import CategoryPicker from '/components/forms/CategoryPicker.vue'
+// import EstimatePricing from 'components/forms/EstimatedPricing.vue'
 export default {
   /* Note: the styles for this file is from the layout */
   layout: 'StoreAdminLayout',
-  components: [
+  components: {
     LabeledInput,
     LabeledTextArea,
     HelpToolTip,
-    EstimatePricing,
-    UploadImages,
-    CategoryPicker,
+    // EstimatePricing,
+    // UploadImages,
+    // CategoryPicker,
     LabeledSelect,
-    EstimatedPricing,
-  ],
+    // EstimatedPricing,
+  },
   beforeMount() {
     // Add title to global store
     this.$store.commit('meta/updateTitle', this.title)
@@ -119,7 +111,13 @@ export default {
       repairItem: '',
       repairCategory: {},
       repairDescription: '',
-      repairDateOptions: ['Today', 'Tomorrow', 'Any day within 1 week'],
+      repairDateOptions: ['Today', 'Tomorrow (-2% off)', 'Within 3 - 7 days (-10% off)'],
+      repairDate: '',
+      formatErrors: {
+        repairItem: false,
+        repairCategory: false,
+        repairDescription: false,
+      },
     }
   },
   computed: {

@@ -44,13 +44,6 @@ export default {
   ],
 
   redirect: [
-    {'^/signin': '/log-in'},
-    {'^/sign-in': '/log-in'},
-    {'^/signup': '/log-in'},
-    {'^/sign-up': '/log-in'},
-    {'^/login': '/log-in'},
-    {'^/register': '/log-in'},
-    {'^/create-account': '/log-in'},
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
